@@ -1,0 +1,93 @@
+epeat task.wait(5) until game:IsLoaded(3)
+repeat task.wait() until game.Players
+repeat task.wait() until game.Players.LocalPlayer
+repeat task.wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui")
+repeat task.wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main");
+UserSettings():GetService('UserGameSettings').MasterVolume = 0;
+settings().Rendering.QualityLevel = 1;
+game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Chat,false)
+game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList,false)
+game:GetService("Lighting").GlobalShadows = false
+for key, object in pairs(workspace:GetDescendants()) do
+    if object:IsA("Part") or object:IsA("UnionOperation") or object:IsA("MeshPart") then
+        object.Material = Enum.Material.SmoothPlastic
+    elseif  (object:IsA("Texture") or object:IsA("Explosion") or object:IsA("ColorCorrectionEffect") or 
+                object:IsA("Atmosphere") or object:IsA("SunRaysEffect") or object:IsA("BlurEffect") or 
+                object:IsA("RainyStone") or object:IsA("Weather")  or object:IsA("BloomEffect")
+                or object:IsA("Lighting") or object:IsA("FogEnd") or object:IsA("DepthOfFieldEffect")) then
+        object:Destroy()
+    end
+end
+repeat task.wait() until game:IsLoaded()
+repeat task.wait() until game.Players
+repeat task.wait() until game.Players.LocalPlayer
+repeat task.wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui")
+repeat task.wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main");
+_G.Team = "Pirate" -- Marine / Pirate
+_G.KAITUN_SCRIPT = true
+_G.LogsDes = {
+    ["Enabled"] = true,
+    ["SendAlias"] = true,
+    ["SendDescription"] = true,
+    ["DelaySend"] = 5 
+}
+_G.WebHook = {
+    ["Enabled"] = true,
+    ["Url"] = "", 
+    ["Delay"] = 120 
+}
+_G.MainSettings = {
+        ["EnabledHOP"] = true,
+        ['FPSBOOST'] = true,
+        ["FPSLOCKAMOUNT"] = 30,
+        ['WhiteScreen'] = true,
+        ['CloseUI'] = true,
+        ["NotifycationExPRemove"] = true, 
+        ['AFKCheck'] = 150,
+        ["LockFragments"] = 20000,
+        ["LockFruitsRaid"] = { 
+            [1] = "Dough-Dough",
+            [2] = "Dragon-Dragon"
+        }
+    }
+_G.Fruits_Settings = {
+    ['Main_Fruits'] = {'Dough-Dough'},
+    ['Select_Fruits'] = {"Flame-Flame", "Ice-Ice", "Quake-Quake", "Light-Light", "Dark-Dark", "Rumble-Rumble", "Magma-Magma"}
+}
+_G.Quests_Settings = { 
+    ['Rainbow_Haki'] = true,
+    ["MusketeerHat"] = true,
+    ["PullLever"] = true,
+    ['DoughQuests_Mirror'] = {
+        ['Enabled'] = true,
+        ['UseFruits'] = true
+    }        
+}
+_G.Settings_Melee = { -- หมัดที่จะทำ
+    ['Superhuman'] = true,
+    ['DeathStep'] = true,
+    ['SharkmanKarate'] = true,
+    ['ElectricClaw'] = true,
+    ['DragonTalon'] = true,
+    ['Godhuman'] = true
+}
+_G.SwordSettings = { 
+    ['Saber'] = true,
+    ["Pole"] = false,
+    ['MidnightBlade'] = false,
+    ['Shisui'] = false,
+    ['Saddi'] = false,
+    ['Wando'] = false,
+    ['Yama'] = true,
+    ['Rengoku'] = false,
+    ['Canvander'] = false,
+    ['BuddySword'] = false,
+    ['TwinHooks'] = false,
+    ['HallowScryte'] = true,
+    ['TrueTripleKatana'] = false,
+    ['CursedDualKatana'] = false
+}
+
+_G.Key = "LuxuryV2_q1bzw10s657y2jnivr0h"
+_G.DiscordId = "992443898188288001"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NightsTimeZ/RoyryX/main/Loader.lua"))()
