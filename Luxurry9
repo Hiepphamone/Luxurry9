@@ -1,73 +1,83 @@
-repeat task.wait() until game:IsLoaded()
-repeat task.wait() until game.Players
-repeat task.wait() until game.Players.LocalPlayer
-repeat task.wait() until game.Players.LocalPlayer:FindFirstChild("PlayerGui")
-repeat task.wait() until game.Players.LocalPlayer.PlayerGui:FindFirstChild("Main");
-_G.Team = "Pirate" -- Marine / Pirate
-_G.KAITUN_SCRIPT = true
-_G.LogsDes = {
-    ["Enabled"] = true,
-    ["SendAlias"] = true,
-    ["SendDescription"] = true,
-    ["DelaySend"] = 5 
-}
-_G.WebHook = {
-    ["Enabled"] = true,
-    ["Url"] = "", 
-    ["Delay"] = 120 
-}
-_G.MainSettings = {
-        ["EnabledHOP"] = true,
-        ['FPSBOOST'] = true,
-        ["FPSLOCKAMOUNT"] = 30,
-        ['WhiteScreen'] = true,
-        ['CloseUI'] = true,
-        ["NotifycationExPRemove"] = true, 
-        ['AFKCheck'] = 150,
-        ["LockFragments"] = 20000,
-        ["LockFruitsRaid"] = { 
-            [1] = "Dough-Dough",
-            [2] = "Dragon-Dragon"
-        }
-    }
-_G.Fruits_Settings = {
-    ['Main_Fruits'] = {'Dough-Dough'},
-    ['Select_Fruits'] = {"Flame-Flame", "Ice-Ice", "Quake-Quake", "Light-Light", "Dark-Dark", "Rumble-Rumble", "Magma-Magma"}
-}
-_G.Quests_Settings = { 
-    ['Rainbow_Haki'] = true,
-    ["MusketeerHat"] = true,
-    ["PullLever"] = true,
-    ['DoughQuests_Mirror'] = {
-        ['Enabled'] = true,
-        ['UseFruits'] = true
-    }        
-}
-_G.Settings_Melee = { -- หมัดที่จะทำ
-    ['Superhuman'] = true,
-    ['DeathStep'] = true,
-    ['SharkmanKarate'] = true,
-    ['ElectricClaw'] = true,
-    ['DragonTalon'] = true,
-    ['Godhuman'] = true
-}
-_G.SwordSettings = { 
-    ['Saber'] = true,
-    ["Pole"] = false,
-    ['MidnightBlade'] = false,
-    ['Shisui'] = false,
-    ['Saddi'] = false,
-    ['Wando'] = false,
-    ['Yama'] = true,
-    ['Rengoku'] = false,
-    ['Canvander'] = false,
-    ['BuddySword'] = false,
-    ['TwinHooks'] = false,
-    ['HallowScryte'] = true,
-    ['TrueTripleKatana'] = false,
-    ['CursedDualKatana'] = false
+shared.Team = "Pirates"
+getgenv().Configs = {
+    FpsBoost = true,
+    SkipFarm = true,
+    HopIfCantKill = true,
+    BlockAllHop = false,
+
+    FastAttack = true,
+    NewFastAttack = true,
+    NoAttackAnimation = true,
+    
+    StartKaitun = true,
+    -- World 1
+    AutoPole = true,
+    AutoSaber = true,
+    
+    AutoSecondSea = true,
+    -- World 2
+    AutoRengoku = true,
+    AutoQuestFlower = true,
+    AutoRaceV3 = false,
+    AutoBartiloQuest = true,
+    AutoCursedCaptain = true,
+    AutoDarkbeard = true,
+    AutoFactory = true,
+    AutoThirdSea = true,
+    SkipGetItemGuitar = true,
+    AlliesFruit = {"Dragon-Dragon","Dough-Dough"},
+    -- World 3
+    AutoHallowScythe = true,
+    AutoBuddySword = true,
+    AutoDoughKing = true,
+    AutoSpikeyTrident = true,
+    AutoTushita = true,
+    AutoEliteHunter = true,
+    AutoDarkDagger = true,
+    AutoYama = true,
+    AutoCanvander = true,
+    AutoSoulGuitar = true, 
+    AutoRainbowHaki = true,
+    AutoCursedDualKatana = true,
+    
+    -- Fighting Style 
+    
+    AutoGodHuman = true,
+    AutoSuperhuman = true,
+    AutoDeathStep = true,
+    AutoSharkmanKarate = true,
+    AutoElectricClaw = true,
+    AutoDargonTalon = true,
+    
+    AutoDFMastery = true,
+    SettingsSkill = {
+        -- ["Z"] = 0.1,
+        -- ["X"] = 0.1,
+        -- ["C"] = 0.1,
+        -- ["V"] = 0.1,
+    },
+    AutoSwordMastery = true,
+    SelectRaritySword = {"Mythical","Legendary"}, -- Common , Uncommon,Rare,Legendary,Mythical
+    
+    SelectRedeemCodeLevel = 1,
+    
+    -- Raids
+    
+    SelectRateFruitRaid = 1000000,
+    LimitFragmentsRaids = 100000,
+    
+    -- Devil Fruit
+
+    SelectMainDF = {"Dragon-Dragon","Dough-Dough"},
+    SelectSubDF = {""Dragon-Dragon","Dough-Dough"},
+    AllowEatDFInventory = true,
+    StartSniper = true,
+           
+    LockFPS = 20,
+    LockFPSNow = true,
+    WhiteScreen = false
 }
 
 _G.Key = "LuxuryV2_q1bzw10s657y2jnivr0h"
 _G.DiscordId = "992443898188288001"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/NightsTimeZ/RoyryX/main/Loader.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Hiepphamone/Luxurry9/main/Luxurry9"))()
